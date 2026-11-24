@@ -1,20 +1,23 @@
 :root{
-  --brand:#0B82C4;
-  --brand-2:#00346D;
-  --accent:#BF1A45;
-  --bg:#F4F8FC;
-  --bg-2:#E6F1FA;
+  /* Bộ màu: #0B0720 #25134D #6A2FC8 #9D71E8 #D1B8FF #F2E9FF */
+  --brand:#6A2FC8;
+  --brand-2:#25134D;
+  --accent:#9D71E8;
+  --bg:#F2E9FF;
+  --bg-2:#E6D7FF;
   --card:#FFFFFF;
-  --text:#16233D;
-  --text-soft:#55627A;
-  --line:rgba(11,130,196,0.14);
-  --line-strong:rgba(11,130,196,0.30);
-  --price:#BF1A45;
-  --mark:rgba(237,180,40,0.38);
-  --shadow:0 6px 18px rgba(15,59,90,0.10);
-  --glass:rgba(255,255,255,0.78);
-  --switch-on:#34C759;
-  --switch-off:#E5E5EA;
+  --text:#0B0720;
+  --text-soft:#5B4D7C;
+  --line:rgba(106,47,200,0.14);
+  --line-strong:rgba(106,47,200,0.30);
+  --price:#6A2FC8;
+  --mark:rgba(157,113,232,0.32);
+  --shadow:0 6px 18px rgba(37,19,77,0.12);
+  --glass:rgba(242,233,255,0.82);
+  --switch-on:#6A2FC8;
+  --switch-off:#E3DAF2;
+  --hero:linear-gradient(135deg,#25134D 0%,#6A2FC8 60%,#9D71E8 100%);
+  --result:linear-gradient(135deg,#6A2FC8,#25134D);
   --radius:14px;
   --sans:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --mono:'SFMono-Regular', ui-monospace, Consolas, monospace;
@@ -23,21 +26,24 @@
   color-scheme:light;
 }
 :root[data-theme="dark"]{
-  --brand:#4DB3F0;
-  --brand-2:#9CD4F7;
-  --accent:#FF6B8B;
-  --bg:#0E1726;
-  --bg-2:#172335;
-  --card:#152033;
-  --text:#E7EEF8;
-  --text-soft:#9AA8BD;
-  --line:rgba(156,212,247,0.12);
-  --line-strong:rgba(156,212,247,0.26);
-  --price:#FF8FA6;
-  --mark:rgba(237,180,40,0.35);
-  --shadow:0 6px 18px rgba(0,0,0,0.35);
-  --glass:rgba(21,32,51,0.80);
-  --switch-off:#39393D;
+  --brand:#D1B8FF;
+  --brand-2:#9D71E8;
+  --accent:#9D71E8;
+  --bg:#0B0720;
+  --bg-2:#25134D;
+  --card:#150C33;
+  --text:#F2E9FF;
+  --text-soft:#B3A3D6;
+  --line:rgba(209,184,255,0.12);
+  --line-strong:rgba(209,184,255,0.26);
+  --price:#D1B8FF;
+  --mark:rgba(157,113,232,0.40);
+  --shadow:0 6px 18px rgba(0,0,0,0.45);
+  --glass:rgba(11,7,32,0.82);
+  --switch-on:#9D71E8;
+  --switch-off:#39304F;
+  --hero:linear-gradient(135deg,#25134D 0%,#4A21A0 55%,#6A2FC8 100%);
+  --result:linear-gradient(135deg,#4A21A0,#25134D);
   color-scheme:dark;
 }
 
@@ -75,7 +81,7 @@ button{font:inherit; color:inherit;}
   .footer{padding-bottom:24px !important;}
 }
 .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--text);}
-.brand img{border-radius:10px; flex-shrink:0;}
+.brand img{border-radius:10px; flex-shrink:0; box-shadow:0 0 0 1px var(--line-strong);}
 .brand b{display:block; font-size:16px; letter-spacing:-0.01em;}
 .brand small{display:block; font-size:11.5px; color:var(--text-soft); margin-top:1px;}
 .side-nav{display:flex; flex-direction:column; gap:2px;}
@@ -85,8 +91,8 @@ button{font:inherit; color:inherit;}
 }
 .side-nav a svg{width:18px; height:18px; color:var(--text-soft);}
 .side-nav a:hover{background:var(--bg-2);}
-.side-nav a.active{background:var(--brand); color:#fff;}
-.side-nav a.active svg{color:#fff;}
+.side-nav a.active{background:var(--brand); color:var(--card);}
+.side-nav a.active svg{color:var(--card);}
 .side-regions{flex:1; min-height:0; display:flex; flex-direction:column; border-top:1px solid var(--line); padding-top:10px;}
 .side-label{font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-soft); margin:0 4px 6px;}
 .side-filter{
@@ -175,7 +181,7 @@ button{font:inherit; color:inherit;}
 }
 .hero{
   margin-top:14px; border-radius:var(--radius); padding:18px;
-  background:linear-gradient(135deg,#0B82C4 0%,#5798D2 40%,#8C6E9C 70%,#BF1A45 100%); color:#fff;
+  background:var(--hero); color:#fff;
 }
 .hero h1{margin:0 0 4px; font-size:21px; letter-spacing:-0.01em;}
 .hero p{margin:0; font-size:13px; opacity:.9; line-height:1.5;}
@@ -192,7 +198,7 @@ button{font:inherit; color:inherit;}
   cursor:pointer; text-decoration:none; color:var(--text); width:100%;
 }
 .pin-card{flex-direction:column; align-items:flex-start; border:1.5px solid var(--accent);}
-.pin-card .badge{font-size:10.5px; color:var(--accent); text-transform:uppercase; letter-spacing:0.06em; font-weight:600;}
+.pin-card .badge{font-size:10.5px; color:var(--brand); text-transform:uppercase; letter-spacing:0.06em; font-weight:600;}
 .pin-card .name{font-size:17px; font-weight:700; color:var(--brand);}
 .pin-card .count{font-size:12px; color:var(--text-soft);}
 .region-row:hover,.pin-card:hover{border-color:var(--line-strong); box-shadow:var(--shadow);}
@@ -211,7 +217,7 @@ button{font:inherit; color:inherit;}
   width:100%; padding:9px 12px; border-radius:10px; border:1px solid var(--line-strong);
   background:var(--card); color:var(--text); font-size:16px; margin:6px 0 4px;
 }
-.subsection-title{font-size:12.5px; font-weight:700; color:var(--accent); margin:18px 2px 6px; text-transform:uppercase; letter-spacing:0.03em;}
+.subsection-title{font-size:12.5px; font-weight:700; color:var(--brand); margin:18px 2px 6px; text-transform:uppercase; letter-spacing:0.03em;}
 .group-title{
   font-size:13px; font-weight:600; color:var(--brand); margin:14px 0 4px; padding:6px 10px;
   background:var(--bg-2); border-left:3px solid var(--accent); border-radius:0 8px 8px 0;
@@ -221,7 +227,7 @@ button{font:inherit; color:inherit;}
 .price-row{display:flex; justify-content:space-between; gap:12px; align-items:flex-start; padding:11px 0; border-bottom:1px solid var(--line);}
 .price-row:last-child{border-bottom:none;}
 .prow-left{flex:1; min-width:0;}
-.prow-ctx{font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:0.03em; font-weight:600; margin-bottom:2px;}
+.prow-ctx{font-size:11px; color:var(--brand); text-transform:uppercase; letter-spacing:0.03em; font-weight:600; margin-bottom:2px;}
 .prow-group{font-size:11.5px; color:var(--text-soft); margin-bottom:2px; font-style:italic;}
 .prow-street{font-size:14.5px; font-weight:600; line-height:1.35;}
 .prow-seg{font-size:12.5px; color:var(--text-soft); margin-top:2px; line-height:1.45;}
@@ -244,7 +250,7 @@ mark{background:var(--mark); color:inherit; border-radius:2px;}
 /* agri */
 .agri-table{border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--card);}
 .agri-head,.agri-row{display:grid; grid-template-columns:1.6fr .7fr .7fr; padding:11px 13px; gap:8px; align-items:center;}
-.agri-head{background:var(--brand); color:#fff; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; font-weight:600;}
+.agri-head{background:var(--brand-2); color:#F2E9FF; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; font-weight:600;}
 .agri-row{border-top:1px solid var(--line); font-size:13.5px;}
 .agri-row .val{font-family:var(--mono); font-weight:700; color:var(--price); text-align:right;}
 .note{
@@ -260,7 +266,7 @@ mark{background:var(--mark); color:inherit; border-radius:2px;}
 .ref-card ul{margin:0; padding-left:18px;}
 .vt-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:10px 0;}
 .vt-cell{background:var(--bg-2); border-radius:9px; padding:8px 4px; text-align:center;}
-.vt-cell .n{font-size:11px; color:var(--accent);}
+.vt-cell .n{font-size:11px; color:var(--text-soft);}
 .vt-cell .p{font-size:18px; font-weight:700; color:var(--brand);}
 
 /* calculator */
@@ -275,8 +281,7 @@ mark{background:var(--mark); color:inherit; border-radius:2px;}
 .seg button{border:none; background:none; padding:8px 2px; border-radius:8px; font-size:13px; font-weight:600; cursor:pointer; color:var(--text-soft);}
 .seg button.on{background:var(--card); color:var(--brand); box-shadow:0 1px 3px rgba(0,0,0,.12);}
 .switch-row{display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:14px;}
-.result{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#fff; border-radius:var(--radius); padding:16px;}
-:root[data-theme="dark"] .result{background:linear-gradient(135deg,#0B5C8C,#123A63);}
+.result{background:var(--result); color:#fff; border-radius:var(--radius); padding:16px;}
 .result .lbl{font-size:12px; opacity:.85;}
 .result .big{font-size:26px; font-weight:700; font-family:var(--mono); margin:2px 0 8px; word-break:break-word;}
 .result .formula{font-size:12px; opacity:.9; line-height:1.6; font-family:var(--mono);}
