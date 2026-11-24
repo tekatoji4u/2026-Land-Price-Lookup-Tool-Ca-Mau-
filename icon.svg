@@ -5,7 +5,7 @@
   </defs>
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
   <path d="M256 132 92 90v44l164 26z" fill="url(#beam)"/>
-  <path d="M256 132l164-42v44l-164 26z" fill="url(#beam)" transform="matrix(-1 0 0 1 512 0)"/>
+  <path d="M256 132 92 90v44l164 26z" fill="url(#beam)" transform="matrix(-1 0 0 1 512 0)"/>
   <path d="M226 120h60l-8-28h-44z" fill="#F2E9FF"/>
   <rect x="218" y="120" width="76" height="22" rx="6" fill="#9D71E8"/>
   <path d="M222 142h68l22 250H200z" fill="#F2E9FF"/>

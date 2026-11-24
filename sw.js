@@ -1,8 +1,8 @@
 // Cho phép dùng khi mất mạng: phục vụ từ bộ nhớ đệm, đồng thời cập nhật ngầm khi có mạng.
 // Tăng VERSION mỗi khi đổi danh sách tệp cần lưu sẵn.
-const VERSION = 'v5';
+const VERSION = 'v6';
 const CACHE = 'gia-dat-ca-mau-' + VERSION;
-const ASSETS = ['./', 'index.html', 'styles.css', 'app.js', 'data.json', 'icon.svg', 'manifest.webmanifest'];
+const ASSETS = ['./', 'index.html', 'styles.css', 'app.js', 'data.json', 'icon.svg', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'manifest.webmanifest'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
