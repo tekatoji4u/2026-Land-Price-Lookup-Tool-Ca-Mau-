@@ -1,6 +1,6 @@
 // Cho phép dùng khi mất mạng: phục vụ từ bộ nhớ đệm, đồng thời cập nhật ngầm khi có mạng.
 // Tăng VERSION mỗi khi đổi danh sách tệp cần lưu sẵn.
-const VERSION = 'v6';
+const VERSION = 'v7';
 const CACHE = 'gia-dat-ca-mau-' + VERSION;
 const ASSETS = ['./', 'index.html', 'styles.css', 'app.js', 'data.json', 'icon.svg', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'manifest.webmanifest'];
 

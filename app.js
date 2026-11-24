@@ -289,7 +289,9 @@
         <b>Vị trí đất nông nghiệp</b> (giá trên là mức Vị trí 1):<br>
         • Vị trí 1 (60m đầu từ chỉ giới đường đỏ / ranh GPMB / mép đường hiện hữu): 100%<br>
         • Vị trí 2 (trên 60m đến 120m): 80% so với Vị trí 1<br>
-        • Vị trí 3 (các vị trí còn lại): 60% so với Vị trí 1
+        • Vị trí 3 (các vị trí còn lại): 60% so với Vị trí 1<br><br>
+        <b>Đất chăn nuôi tập trung, đất nông nghiệp khác</b>: tính bằng giá đất trồng cây lâu năm cùng khu vực, vị trí.<br>
+        <b>Thửa đất giáp 2 tuyến đường (hoặc sông, kênh, rạch) trở lên</b>: giá tại vị trí của thửa đất nhân hệ số 1,2 (Điều 6, khoản 3).
       </div>`;
   }
 
@@ -305,9 +307,9 @@
       </div>
       <div class="ref-card"><h3>Đất giáp sông, kênh, rạch</h3>
         <p>Tính bằng giá đất ở <b>chưa có cơ sở hạ tầng thuận lợi giao thông</b> (vị trí tính từ mép sông/kênh/rạch). Nếu có lộ giao thông cặp sông/kênh/rạch thì tính theo giá đất ở của tuyến đường đó.</p></div>
-      <div class="ref-card"><h3>Thửa đất giáp 2 mặt tiền trở lên</h3>
-        <p>Lấy giá của tuyến đường có mức giá <b>cao nhất</b>, nhân hệ số <b>1,2 lần</b>.</p></div>
-      <div class="ref-card"><h3>Đoạn đường chênh lệch giá (Điều 5đ)</h3>
+      <div class="ref-card"><h3>Thửa đất giáp 2 mặt tiền trở lên (Điều 5, khoản 2d)</h3>
+        <p>Thửa đất giáp hai tuyến đường (hoặc giáp sông, kênh, rạch) trở lên: lấy giá của tuyến đường có mức giá <b>cao nhất</b>, nhân hệ số <b>1,2 lần</b>. Thửa liền kề cùng chủ sử dụng với thửa mặt tiền được xác định vị trí như thửa mặt tiền.</p></div>
+      <div class="ref-card"><h3>Đoạn đường chênh lệch giá (Điều 5, khoản 2đ)</h3>
         <p>Đoạn giá thấp liền kề đoạn giá cao: giảm dần đều 5%/10m — 10m đầu = 95% giá cao, 10m tiếp = 90%, tiếp theo 85%... đến khi bằng mức giá đoạn thấp nhất.</p></div>
       <div class="ref-card"><h3>Đất phi nông nghiệp khác — % giá đất ở cùng vị trí</h3>
         <ul>
@@ -315,11 +317,35 @@
           <li>Cơ sở SX phi nông nghiệp (không phải TM-DV): <b>60%</b></li>
           <li>Khu công nghiệp, cụm công nghiệp: <b>60%</b></li>
           <li>Khu công nghệ cao: <b>60%</b></li>
-          <li>Trụ sở cơ quan, công trình sự nghiệp, tôn giáo/tín ngưỡng, nghĩa trang: <b>80%</b></li>
+          <li>Trụ sở cơ quan, công trình sự nghiệp, tôn giáo/tín ngưỡng, nghĩa trang, nhà tang lễ, cơ sở hỏa táng, lưu trữ tro cốt: <b>80%</b></li>
           <li>Đất công cộng có/không kinh doanh, đất phi NN khác: bằng giá đất cơ sở SX phi NN cùng vị trí</li>
           <li>Sông, kênh, rạch, mặt nước chuyên dùng: <b>50%</b></li>
         </ul>
-        <p>Nếu vị trí đó không có giá đất ở, lấy theo giá đất ở của đoạn/tuyến đường lân cận gần nhất có mức giá cao nhất.</p></div>`;
+        <p>Nếu vị trí đó không có giá đất ở, lấy theo giá đất ở của đoạn/tuyến đường lân cận gần nhất có mức giá cao nhất.</p></div>
+      <div class="ref-card"><h3>Đất ở chưa có cơ sở hạ tầng (Điều 3, Điều 5 khoản 2e)</h3>
+        <ul>
+          <li><b>Thuận lợi về giao thông thủy, bộ</b>: thửa đất giáp sông, kênh, rạch hoặc giáp đường đất, đường đá cấp phối (đã có lối đi nhưng đường chưa hoàn thiện).</li>
+          <li><b>Không thuận lợi</b>: thửa đất không giáp đường bộ hoặc đường thủy.</li>
+        </ul>
+        <p>Mỗi xã, phường có 2 mức giá này ở cuối bảng. Trường hợp được công nhận quyền sử dụng đất, giao đất, cho thuê, chuyển mục đích không thuộc các trường hợp trên thì tính theo giá đất ở chưa có cơ sở hạ tầng.</p></div>
+      <div class="ref-card"><h3>Giá đất trong hẻm (Điều 7)</h3>
+        <p><b>Hẻm chính</b> (giáp đường), theo % giá mặt tiền đường (VT1):</p>
+        <ul>
+          <li>Rộng từ 4m trở lên: <b>30%</b></li>
+          <li>Rộng từ 2,5m đến dưới 4m: <b>25%</b></li>
+          <li>Rộng dưới 2,5m: <b>20%</b></li>
+        </ul>
+        <p><b>Hẻm phụ</b> (giáp hẻm chính, không giáp đường): <b>80%</b> giá hẻm chính tương ứng.</p>
+        <p><b>Độ sâu</b> tính từ mép đường: đến mét 100 tính 100%; từ trên 100m đến 300m tính 90%; trên 300m tính 80%.</p>
+        <p><b>Kết cấu hẻm</b>: đủ 3 điều kiện (lộ bê tông/xi măng/nhựa, thoát nước và điện đến từng hộ) tính 100%; thiếu 1 điều kiện giảm 10%, thiếu 2 giảm 20%, thiếu 3 giảm 30%.</p>
+        <p>Đơn giá hẻm = giá loại hẻm × hệ số chiều dài × hệ số kết cấu, nhưng không thấp hơn giá đất ở chưa có cơ sở hạ tầng <i>không thuận lợi</i> của xã, phường. Hẻm thông ra nhiều đường lấy đơn giá cao hơn. Thửa vừa giáp đường vừa giáp hẻm: giá tuyến đường × <b>1,1</b>.</p></div>
+      <div class="ref-card"><h3>Các trường hợp khác (Điều 8)</h3>
+        <ul>
+          <li>Đoạn đường cặp hai bên cầu (tính từ mố cầu) chưa có giá trong bảng: <b>50%</b> giá tuyến đường liền kề có mức cao nhất.</li>
+          <li>Cạnh tiếp giáp để xác định vị trí phải rộng tối thiểu <b>3,5m</b> (đô thị) hoặc <b>4m</b> (nông thôn); nếu không đủ thì lấy cạnh tiếp giáp dài nhất.</li>
+          <li>Thửa đất có nhiều vị trí cho ra nhiều giá: lấy vị trí có đơn giá <b>cao nhất</b>.</li>
+          <li>Hẻm cụt, khả năng sinh lợi kém hoặc đoạn đường hạ tầng chưa đồng bộ: giảm <b>30%</b> so với đơn giá vị trí đó.</li>
+        </ul></div>`;
   }
 
   /* ---------- Máy tính giá đất ---------- */
