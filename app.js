@@ -153,7 +153,7 @@
     const titles = {home:'', tim:'Tìm kiếm', 'nong-nghiep':'Đất nông nghiệp', 'quy-dinh':'Quy định vị trí', 'may-tinh':'Máy tính giá đất'};
     let t = titles[r.name] || '';
     if(r.name === 'khu' && REGION_BY_SLUG[r.slug]) t = niceName(REGION_BY_SLUG[r.slug].ten);
-    document.title = (t ? t + ' · ' : '') + 'Bảng giá đất Cà Mau 2026';
+    document.title = (t ? t + ' · ' : '') + 'Tra Giá Đất CM';
   }
 
   /* ---------- Thành phần dùng chung ---------- */
