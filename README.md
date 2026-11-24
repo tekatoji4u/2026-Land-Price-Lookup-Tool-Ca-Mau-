@@ -1,4 +1,4 @@
-# Bảng giá đất Cà Mau 2026
+# LandBeacon — Bảng giá đất Cà Mau 2026
 
 Web app tra cứu bảng giá đất tỉnh Cà Mau áp dụng từ 01/01/2026 theo Nghị quyết 16/2025/NQ-HĐND. Chạy hoàn toàn tĩnh trên GitHub Pages, không cần máy chủ hay thư viện ngoài.
 
